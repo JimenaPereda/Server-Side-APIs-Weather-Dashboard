@@ -1,0 +1,104 @@
+body{
+  background-color:#b7e3f4;
+}
+
+header{
+  text-align: center;
+  background-color: #ffd774;
+  height: 120px;
+}
+.gridcontainer {
+  display: grid;
+  grid-template-columns: 350px 100px 800px ;
+  grid-gap: 10px;
+  grid-template-rows: auto ;
+ 
+}
+
+.gridcontainer2{
+  margin-top: 0em;
+  display: grid;
+  grid-template-columns: 390px  200px 200px 200px 200px 200px ;
+  grid-column-gap: 2px;
+  grid-template-rows: auto ;
+
+}
+.search-container{
+  margin-top: 40px;
+  width: 305px;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  color: rgb(90, 13, 90);
+  padding-left: 10%;
+}
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 5px solid rgb(90, 13, 90);;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 5px solid rgb(90, 13, 90);;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.jumbotron-fluid{
+  width: 900px;
+  height: 500px;
+  margin-top: 40px;
+  border: 5px solid;
+  border-color: #FBC00E;
+}
+h1{
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  color: rgb(90, 13, 90);
+  
+}
+.list-group{
+  width: 340px;
+  color: #29B3FF;
+  font-family: 'Inconsolata', monospace;
+  border: 5px solid;
+  border-color:rgb(160, 235, 21);
+}
+li{
+  height: 50px;
+  
+}
+
+.card{
+  width: 198px;
+  height:300px;
+  margin-bottom: 80px;
+  border: 5px solid;
+  border-color:#29B3FF;
+}
+footer{
+  margin-top: 18px;
+  height: 41px;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: #ffffff;
+  background-color: #beaddf;
+}
