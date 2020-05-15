@@ -27,83 +27,93 @@
                 <div></div>
                   <a>Search for a city:</a>
                   <pre></pre>
-                  <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                  <form class="example"style="margin:auto;max-width:300px">
                     <input id="citySearch" type="text" placeholder="Search..">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button id="add-city"><i class="fa fa-search"></i></button>
                   </form>
                   <!--List-->
                    <pre></pre>
-                     <div class="list">
-                       <ul class="list-group" id="resultsList">
-                         <li class="list-group-item"></li>
-                         <li class="list-group-item"></li>
-                         <li class="list-group-item"></li>
-                         <li class="list-group-item"></li>
-                         <li class="list-group-item"></li>
-                         <li class="list-group-item"></li>
-                         <li class="list-group-item"></li>
-                         <li class="list-group-item"></li> 
-                       </ul>
-                     </div>
+                       
+                       <!-- Buttons will get dumped here: -->
+					          <div id="buttons-view" class="cardlist" style="width: 18rem;">
+						          <ul class="list-group list-group-flush" id=""></ul>
+				          	</div>
              </div>
            <div></div>
-       <!--Card Container-->
-            <div class="jumbotron jumbotron-fluid">
-                  <div class="card-panel" id="mainPanel">
-                   <span id="mainCard" class="white-text"></span>
-                  </div>
+
+            <!--Card Container-->
+            <div class="jumbotron jumbotron-fluid ">
+              <ul class="list-group list-group-flush city-Info">
+                <li class="list-group-item" id="current-city"></li>
+                <li class="list-group-item"><img id="current-icon"></img></li>
+                <li class="list-group-item" id="current-temp"></li>
+                <li class="list-group-item" id="current-humidity"></li>
+                <li class="list-group-item" id="current-wind"></li>
+                <li class="list-group-item" id="current-uv"></li>
+              </ul>
             </div>   
               
     </div>
-     <div class="gridcontainer2">
-      <div id="imgd"><img src="5DAY.png" alt="Image" style="width:380px;height:340px;" /></div>
-      <div class="card" >
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <h6 class="card-subtitle mb-2 text-muted"></h6>
-          <p class="card-text"></p>
-        </div>
-      </div> 
-     <!--5 day forecast cards-->
-      <div class="card" >
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <h6 class="card-subtitle mb-2 text-muted"></h6>
-          <p class="card-text"></p>
-        </div>
-      </div> 
+      
+       <!--5 day forecast cards-->
 
-      <div class="card" >
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <h6 class="card-subtitle mb-2 text-muted"></h6>
-          <p class="card-text"></p>
-        </div>
-      </div> 
+    <div class="gridcontainer2">
 
-      <div class="card" >
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <h6 class="card-subtitle mb-2 text-muted"></h6>
-          <p class="card-text"></p>
-        </div>
-      </div> 
-
-      <div class="card" >
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <h6 class="card-subtitle mb-2 text-muted"></h6>
-          <p class="card-text"></p>
-        </div>
-      </div> 
-
-
-     </div>
+            <div id="imgd"><img src="5DAY.png" alt="Image" style="width:380px;height:340px;" /></div>
+             
      
-     <footer>
-       <p>Today is a good day to be Happy😁</p>
-     </footer>
-     <script src="script.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          
+            <div class="card">
+              <h5 class="dateOne"></h5>
+              <img class="iconOne"></img>
+              <p class="tempOne"></p>
+              <p class="humidityOne"></p>
+           </div>
+          
+  
+          
+            <div class="card">
+              <h5 class="dateTwo"></h5>
+              <img class="iconTwo"></img>
+              <p class="tempTwo"></p>
+              <p class="humidityTwo"></p>
+            </div>
+          
+
+          
+            <div class="card">
+             <h5 class="dateThree"></h5>
+             <img class="iconThree"></img>
+             <p class="tempThree"></p>
+             <p class="humidityThree"></p>
+            </div>
+          
+
+         
+            <div class="card">
+             <h5 class="dateFour"></h5>
+             <img class="iconFour"></img>
+             <p class="tempFour"></p>
+             <p class="humidityFour"></p>
+           </div>
+         
+
+         
+           <div class="card">
+             <h5 class="dateFive"></h5>
+             <img class="iconFive"></img>
+             <p class="tempFive"></p>
+             <p class="humidityFive"></p>
+             </div> 
+         
+
+
+    </div>
+     
+   <footer>
+   <p>Today is a good day to be Happy😁</p>
+   </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="script.js"></script>
   </body>
 </html>
