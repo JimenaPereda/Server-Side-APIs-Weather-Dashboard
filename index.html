@@ -36,7 +36,14 @@
                        
                        <!-- Buttons will get dumped here: -->
 					          <div id="buttons-view" class="cardlist" style="width: 18rem;">
-						          <ul class="list-group list-group-flush" id=""></ul>
+                      <div class="list-group cities"></div>
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-lg"
+                        id="clear-button"
+            >
+                         Clear All
+                         </button>
 				          	</div>
              </div>
            <div></div>
@@ -45,7 +52,6 @@
             <div class="jumbotron jumbotron-fluid ">
               <ul class="list-group list-group-flush city-Info">
                 <li class="list-group-item" id="current-city"></li>
-                <li class="list-group-item"><img id="current-icon"></img></li>
                 <li class="list-group-item" id="current-temp"></li>
                 <li class="list-group-item" id="current-humidity"></li>
                 <li class="list-group-item" id="current-wind"></li>
@@ -59,13 +65,13 @@
 
     <div class="gridcontainer2">
 
-            <div id="imgd"><img src="5DAY.png" alt="Image" style="width:380px;height:340px;" /></div>
+            <div id="imgd"><img src="images/5DAY.png" alt="Image" style="width:380px;height:340px;" /></div>
              
      
           
             <div class="card">
               <h5 class="dateOne"></h5>
-              <img class="iconOne"></img>
+              <img id="iconOne"></img>
               <p class="tempOne"></p>
               <p class="humidityOne"></p>
            </div>
@@ -74,7 +80,7 @@
           
             <div class="card">
               <h5 class="dateTwo"></h5>
-              <img class="iconTwo"></img>
+              <img id="iconTwo"></img>
               <p class="tempTwo"></p>
               <p class="humidityTwo"></p>
             </div>
@@ -83,7 +89,7 @@
           
             <div class="card">
              <h5 class="dateThree"></h5>
-             <img class="iconThree"></img>
+             <img id="iconThree"></img>
              <p class="tempThree"></p>
              <p class="humidityThree"></p>
             </div>
@@ -92,7 +98,7 @@
          
             <div class="card">
              <h5 class="dateFour"></h5>
-             <img class="iconFour"></img>
+             <img id="iconFour"></img>
              <p class="tempFour"></p>
              <p class="humidityFour"></p>
            </div>
@@ -101,7 +107,7 @@
          
            <div class="card">
              <h5 class="dateFive"></h5>
-             <img class="iconFive"></img>
+             <img id="iconFive"></img>
              <p class="tempFive"></p>
              <p class="humidityFive"></p>
              </div> 
@@ -114,6 +120,7 @@
    <p>Today is a good day to be Happy😁</p>
    </footer>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
    <script src="script.js"></script>
   </body>
 </html>

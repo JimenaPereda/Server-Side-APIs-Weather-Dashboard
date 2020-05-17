@@ -39,26 +39,39 @@ form.example input[type=text] {
   width: 80%;
   background: #f1f1f1;
 }
+#citySearch{
+  font-weight: lighter;
+}
 .city-Info{
   display: none;
   
 }
 #current-city{
-  
-  font-size: 20px;
+  color: rgb(1, 41, 73);
+  font-size: 35px;
 }
 #current-temp{
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgb(65, 12, 114);
 }
 #current-humidity{
-  font-size: 20px;
-}
+ font-size: 25px;
+  font-weight: bolder;
+  color: rgb(8, 83, 5);
+} 
 #current-wind{
-  font-size: 20px;
-}
+  font-size: 25px;
+  font-weight: bolder;
+  color: teal;
+} 
+
 #current-uv{
-  font-size: 20px;
-}
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgb(7, 0, 14);
+} 
+
 form.example button {
   float: left;
   width: 20%;
@@ -86,9 +99,10 @@ form.example::after {
   margin-top: 40px;
   border: 5px solid;
   border-color: #FBC00E;
-  background-image: url(back.png);
+  background-image: url(images/back.png);
   background-size: 100% 100%;
 }
+
 h1{
   font-size: 30px;
   font-family: 'Pacifico', cursive;
@@ -100,14 +114,43 @@ h1{
   color: rgb(142, 221, 51);
   font-family: 'Inconsolata', monospace;
 }
-
+#current-city{
+  background-color: #FBC00E;
+  font-size: 25px;
+  font-weight: bold;
+}
+#current-temp{
+  background-color: #FBC00E;
+  font-size: 25px;
+}
+#current-humidity{
+  background-color: #FBC00E;
+  font-size: 25px;
+}
+#current-wind{
+  background-color: #FBC00E;
+  font-size: 25px;
+}
+#current-uv{
+  background-color: #FBC00E;
+  font-size: 25px;
+}
+.list-group-item{
+  background-color: #FBC00E;
+  font-size: 25px;
+}
+#current-icon{
+  background-color: #FBC00E;
+}
 
 .card{
+  background-color:#29B3FF ;
   width: 198px;
   height:300px;
   margin-bottom: 80px;
   border: 5px solid;
   border-color:#29B3FF;
+  font-size: 20px;
 }
 footer{
   margin-top: 18px;
