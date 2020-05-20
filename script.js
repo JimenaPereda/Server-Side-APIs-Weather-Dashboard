@@ -2,6 +2,7 @@ $(document).ready(function() {
         var APIkey = "55781b0b4ffc1477d07f00c547d3d768";
         var search = $("#citySearch")
         var show = search.val(); // to give value to city search//
+        var history = JSON.parse(window.localStorage.getItem("history")) || []
  
         //var search = $("#citySearch").val();
       
@@ -13,7 +14,6 @@ $(document).ready(function() {
        event.preventDefault(); //PREVENIR REFRESH
        var search = $("#citySearch").val();
        console.log(search)
-      
        addCity(search)
        forecast(search)
        //call your function with the value you want to have//
@@ -36,7 +36,11 @@ $(document).ready(function() {
           type: "GET", //to get the info from api"
           data:"json", //make data readable
           success: function(data){
-            console.log(data)  
+            if (history.indexOf(show) === -1){
+              history.push(show);
+              window.localStorage.setItem("history", JSON.stringify(history));
+              
+            }  
             var icon = data.weather[0].icon;
             var imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
             var cityDate = moment().format('l');
