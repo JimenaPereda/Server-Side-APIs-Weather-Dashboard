@@ -2,33 +2,61 @@ $(document).ready(function() {
         var APIkey = "55781b0b4ffc1477d07f00c547d3d768";
         var search = $("#citySearch")
         var show = search.val(); // to give value to city search//
-        var history = JSON.parse(window.localStorage.getItem("history")) || []
- 
+        //var history = JSON.parse(localStorage.getItem("history") )|| []; //array guarda el local storage como string y JSON lo convierte en un array//
+           var history = [];
+        //console.log(history)
+         // addCityBtn(history)//para que se ponga en el boton//
         //var search = $("#citySearch").val();
-      
+      var clearBtn = $("#clear-button")
+     
        // var show = search.val(); // to give value to city search//
- 
+         
         //add city//
        //search click code you can put inout id or class//
        $("#add-city").on("click", function (event) {
        event.preventDefault(); //PREVENIR REFRESH
        var search = $("#citySearch").val();
+       $("#initialDisplay").css("display", "none" )
        console.log(search)
-       addCity(search)
+       currentweather(search)
        forecast(search)
+       addCityBtn(search)
+       history.push(search) //push pone el valor y lo mete al array
+       localStorage.setItem("history", history)
        //call your function with the value you want to have//
       //search.val(""); //clear the input box when new one comes//
       });
     
        //click event for the city we are looking//
-       $(".history").on("click",  function(){
-        addCity($(this).text()) //when everythis is ready the text i want to show is going to appear//
+    
 
-       });
+       /*$(".storage").on("click", function (event){
        
+       var city = $(this).data("list");
+       console.log(city)
+       forecast(city)
+       currentweather(city)
 
+
+       });*/
+       
+      function addCityBtn(cityName){
+        var li = $("<li>");
+        var Btn = $("<button>");
+        Btn.text(cityName)
+        $(".cities").append(li);
+        li.append(Btn);
+        Btn.attr("class", "storage").attr("data-list",cityName);
+        Btn.click(function(){
+          var city = Btn.attr("data-list");
+          console.log(city)
+          forecast(city)
+          currentweather(city)
+        })
+      }
+  
      //this is the add city function  (search) get the value from var show//
-      function addCity(show){
+      function currentweather(show){
       console.log(show)
       var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ show + "&appid=" + APIkey;
          $.ajax ({
@@ -36,11 +64,9 @@ $(document).ready(function() {
           type: "GET", //to get the info from api"
           data:"json", //make data readable
           success: function(data){
-            if (history.indexOf(show) === -1){
-              history.push(show);
-              window.localStorage.setItem("history", JSON.stringify(history));
-              
-            }  
+            
+            $(".storage").show()
+            
             var icon = data.weather[0].icon;
             var imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
             var cityDate = moment().format('l');
@@ -62,6 +88,14 @@ $(document).ready(function() {
           } 
          })
       }
+           function addCity(city){
+            if (history.indexOf(city) === -1){
+              history.push(city);
+              window.localStorage.setItem("history", JSON.stringify(history));
+              
+            } 
+           }
+
 
       function forecast(show) {
         var forcastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + show + "&appid=55781b0b4ffc1477d07f00c547d3d768" ;
@@ -131,6 +165,12 @@ $(document).ready(function() {
         })
                  
    }
+   $("#clear-button").click(function (event) {
+      localStorage.clear();
+     
+      window.location.reload()
       
-
+    });
+      
+    
 });

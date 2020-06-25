@@ -36,7 +36,14 @@
                        
                        <!-- Buttons will get dumped here: -->
 					          <div id="buttons-view" class="cardlist" style="width: 18rem;">
-                      <div class="list-group cities"></div>
+                      <div class="cities">
+                        <!--  <li><button class="storage"></button></li>
+                         <li><button class="storage" data-list="newyork"> New York</button></li>
+                         <li><button class="storage" data-list="madrid"> Madrid</button></li>
+                         <li><button  class="storage"data-list="dubai">Dubai</button></li>
+                         <li><button  class="storage"data-list="ohio">Ohio</button></li> -->
+                        
+                      </div>
                       <button
                         type="button"
                         class="btn btn-danger btn-lg"
@@ -50,6 +57,7 @@
 
             <!--Card Container-->
             <div class="jumbotron jumbotron-fluid ">
+              <div id="initialDisplay"></div>
               <ul class="list-group list-group-flush city-Info">
                 <li class="list-group-item" id="current-city"></li>
                 <li class="list-group-item" id="current-temp"></li>

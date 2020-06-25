@@ -161,3 +161,10 @@ footer{
   color: #ffffff;
   background-color: #beaddf;
 }
+#initialDisplay{
+  
+  background-image: url("images/searchfor.png");
+  width: 400px;
+  height: 300px;
+
+}
