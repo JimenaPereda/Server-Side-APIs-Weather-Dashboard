@@ -9,7 +9,7 @@ header{
 }
 .gridcontainer {
   display: grid;
-  grid-template-columns: 350px 100px 800px ;
+  grid-template-columns: 300px 50px 500px 200px;
   grid-gap: 10px;
   grid-template-rows: auto ;
  
@@ -18,7 +18,7 @@ header{
 .gridcontainer2{
   margin-top: 0em;
   display: grid;
-  grid-template-columns: 390px  200px 200px 200px 200px 200px ;
+  grid-template-columns: 318px  174px 174px 174px 174px 4px ;
   grid-column-gap: 2px;
   grid-template-rows: auto ;
 
@@ -94,8 +94,8 @@ form.example::after {
   display: table;
 }
 .jumbotron-fluid{
-  width: 900px;
-  height: 479px;
+  width: 500px;
+  height: 450px;
   margin-top: 40px;
   border: 5px solid;
   border-color: #FBC00E;
@@ -145,12 +145,12 @@ h1{
 
 .card{
   background-color:#29B3FF ;
-  width: 198px;
-  height:300px;
+  width: 170px;
+  height:250px;
   margin-bottom: 80px;
   border: 5px solid;
   border-color:#29B3FF;
-  font-size: 20px;
+  font-size: 18px;
 }
 footer{
   margin-top: 18px;
@@ -168,3 +168,12 @@ footer{
   height: 300px;
 
 }
+#clear-button{
+  margin-top: 40px;
+}
+#palmTree{
+  padding-left: 3%;
+    margin-top: 50px;
+}
+
+
